@@ -7,3 +7,19 @@
 //
 
 import Foundation
+import SpriteKit
+
+class FootballPlayer : SKSpriteNode {
+    
+    init(imageName: String) {
+        let imageTexture = SKTexture(imageNamed: imageName)
+        
+        super.init(texture: imageTexture, color: SKColor(), size: imageTexture.size())
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+}
