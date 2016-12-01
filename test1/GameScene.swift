@@ -16,7 +16,7 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         footballPlayerNode = FootballPlayer(imageName: "FootballPlayer")
-        footballPlayerNode?.position = CGPoint(x: -100, y: -100)
+        footballPlayerNode?.position = CGPoint(x: -100, y: 100)
         addChild(footballPlayerNode!)
         
     }
@@ -26,7 +26,14 @@ class GameScene: SKScene {
             let location = touch.location(in: self)
             
             increment += 1
-            footballPlayerNode?.position = CGPoint(x: footballPlayerNode!.position.x + (increment * 10), y: footballPlayerNode!.position.y)
+            footballPlayerNode?.position = location
+            footballPlayerNode?.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+            footballPlayerNode?.physicsBody?.isDynamic = false
+            
+            let waitAction = SKAction.wait(forDuration: 1)
+            footballPlayerNode?.run(waitAction, completion: { 
+                self.footballPlayerNode?.makeBodyDynamic()
+            })
         }
     }
     
