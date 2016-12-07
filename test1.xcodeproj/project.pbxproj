@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F2A8FD21DF0638D00DD4BDD /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2A8FD11DF0638D00DD4BDD /* Object.swift */; };
 		7F925D9C1DEF0BBE00FB7613 /* Zombie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F925D9B1DEF0BBE00FB7613 /* Zombie.swift */; };
 		7F93C6671DE5803A009A46A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F93C6661DE5803A009A46A6 /* AppDelegate.swift */; };
 		7F93C6691DE5803A009A46A6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7F93C6681DE5803A009A46A6 /* GameScene.sks */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F2A8FD11DF0638D00DD4BDD /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		7F925D9B1DEF0BBE00FB7613 /* Zombie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zombie.swift; sourceTree = "<group>"; };
 		7F93C6631DE5803A009A46A6 /* test1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F93C6661DE5803A009A46A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				7F93C6681DE5803A009A46A6 /* GameScene.sks */,
 				7F93C66A1DE5803A009A46A6 /* Actions.sks */,
 				7F925D9B1DEF0BBE00FB7613 /* Zombie.swift */,
+				7F2A8FD11DF0638D00DD4BDD /* Object.swift */,
 				7F93C66C1DE5803A009A46A6 /* GameScene.swift */,
 				7F93C66E1DE5803A009A46A6 /* GameViewController.swift */,
 				7F93C6701DE5803A009A46A6 /* Main.storyboard */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2A8FD21DF0638D00DD4BDD /* Object.swift in Sources */,
 				7F93C66D1DE5803A009A46A6 /* GameScene.swift in Sources */,
 				7F93C66F1DE5803A009A46A6 /* GameViewController.swift in Sources */,
 				7F93C6671DE5803A009A46A6 /* AppDelegate.swift in Sources */,

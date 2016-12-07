@@ -10,25 +10,35 @@ import SpriteKit
 
 class GameScene: SKScene {
     
-    enum ZombieState : Int {
-        case Idle
-        case Hurt
-        case Fire
-    }
-    
-    var currentState = ZombieState.Idle
     var zombieNode : Zombie?
     
     override func didMove(to view: SKView) {
-        zombieNode = Zombie(imageName: "8")
-        zombieNode!.position = CGPoint(x: 200, y: -200)
+        self.anchorPoint = CGPoint(x: 0, y: 0)
+        let groundData : [String:String] = ["ImageNamed":"ground",
+                                           "BodyType":"rectangle",
+                                           "Location":"{0,100}",
+                                           "PlaceMultiplesOnX":"10"]
+        view.showsPhysics = true
+        
+        zombieNode = Zombie(imageName: "1")
+        zombieNode?.position = CGPoint(x: 50, y: 200)
         addChild(zombieNode!)
+        
+        let platform = Object(withDictionary: groundData)
+        addChild(platform)
+        platform.position = self.anchorPoint
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
-            let location = touch.location(in: self)
-            
+            _ = touch.location(in: self)
         }
     }
+    
+    
+    
+    override func update(_ currentTime: TimeInterval) {
+
+    }
+    
 }
